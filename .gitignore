@@ -1,0 +1,21 @@
+# Binaries
+/server
+*.exe
+*.out
+*.test
+
+# Build
+/bin/
+/dist/
+
+# IDE
+.vscode/
+.idea/
+
+# Env
+.env
+
+# Misc
+coverage.*
+*.log
+

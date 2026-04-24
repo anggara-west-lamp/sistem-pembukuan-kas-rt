@@ -5,8 +5,8 @@ import (
     "errors"
 
     "golang.org/x/crypto/bcrypt"
-    "sistem-pembukuan-kas-rt/internal/models"
-    "sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
 )
 
 type UserService struct {
@@ -32,4 +32,3 @@ func (s *UserService) Create(ctx context.Context, u *models.User) error {
     u.Password = string(hashed)
     return s.users.Create(ctx, u)
 }
-

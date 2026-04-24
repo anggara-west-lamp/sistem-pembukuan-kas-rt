@@ -4,8 +4,8 @@ import (
     "context"
     "errors"
 
-    "sistem-pembukuan-kas-rt/internal/models"
-    "sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
 )
 
 type KasService struct { repo repository.KasRepository }
@@ -19,4 +19,3 @@ func (s *KasService) Create(ctx context.Context, k *models.Kas) error {
     if k.Type == "" || k.Category == "" { return errors.New("type & category required") }
     return s.repo.Create(ctx, k)
 }
-

@@ -4,7 +4,7 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"
-    "sistem-pembukuan-kas-rt/internal/service"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/service"
 )
 
 type AuthHandler struct{ svc *service.AuthService }
@@ -29,4 +29,3 @@ func (h *AuthHandler) Login(c *gin.Context) {
     }
     c.JSON(http.StatusOK, gin.H{"token": token})
 }
-

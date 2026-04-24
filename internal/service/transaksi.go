@@ -4,8 +4,8 @@ import (
     "context"
     "errors"
 
-    "sistem-pembukuan-kas-rt/internal/models"
-    "sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
 )
 
 type TransactionService struct {
@@ -22,4 +22,3 @@ func (s *TransactionService) Create(ctx context.Context, t *models.Transaction) 
     if t.Status == "" { t.Status = "pending" }
     return s.trxs.Create(ctx, t)
 }
-

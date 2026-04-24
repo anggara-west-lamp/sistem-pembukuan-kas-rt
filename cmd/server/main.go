@@ -6,10 +6,10 @@ import (
 
     "github.com/joho/godotenv"
 
-    "sistem-pembukuan-kas-rt/internal/config"
-    "sistem-pembukuan-kas-rt/internal/db"
-    "sistem-pembukuan-kas-rt/internal/httpserver"
-    "sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/db"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/httpserver"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
 )
 
 func main() {
@@ -41,4 +41,3 @@ func main() {
         log.Fatalf("server error: %v", err)
     }
 }
-

@@ -7,7 +7,7 @@ import (
     "github.com/gin-gonic/gin"
     "github.com/golang-jwt/jwt/v5"
 
-    "sistem-pembukuan-kas-rt/internal/config"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
 )
 
 func JWTAuth(cfg *config.Config) gin.HandlerFunc {
@@ -28,4 +28,3 @@ func JWTAuth(cfg *config.Config) gin.HandlerFunc {
         c.Next()
     }
 }
-

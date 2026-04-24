@@ -4,8 +4,8 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"
-    "sistem-pembukuan-kas-rt/internal/models"
-    "sistem-pembukuan-kas-rt/internal/service"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/service"
 )
 
 type KasHandler struct{ svc *service.KasService }
@@ -24,4 +24,3 @@ func (h *KasHandler) Create(c *gin.Context) {
     if err := h.svc.Create(c, &k); err != nil { c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()}); return }
     c.JSON(http.StatusCreated, k)
 }
-

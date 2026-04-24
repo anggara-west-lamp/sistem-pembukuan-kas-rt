@@ -5,8 +5,8 @@ import (
     "testing"
 
     "golang.org/x/crypto/bcrypt"
-    "sistem-pembukuan-kas-rt/internal/config"
-    "sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
 )
 
 func TestAuthLogin_IssuesJWT(t *testing.T) {
@@ -19,4 +19,3 @@ func TestAuthLogin_IssuesJWT(t *testing.T) {
     if err != nil { t.Fatalf("Login error: %v", err) }
     if len(token) < 20 { t.Fatalf("expected non-empty token, got %q", token) }
 }
-

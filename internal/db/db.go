@@ -6,7 +6,7 @@ import (
     "gorm.io/driver/postgres"
     "gorm.io/gorm"
 
-    "sistem-pembukuan-kas-rt/internal/config"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
 )
 
 func OpenGorm(cfg *config.Config) (*gorm.DB, error) {
@@ -15,4 +15,3 @@ func OpenGorm(cfg *config.Config) (*gorm.DB, error) {
     )
     return gorm.Open(postgres.Open(dsn), &gorm.Config{})
 }
-

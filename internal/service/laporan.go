@@ -2,8 +2,8 @@ package service
 
 import (
     "context"
-    "sistem-pembukuan-kas-rt/internal/models"
-    "sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
 )
 
 type ReportService struct{ trxs repository.TransactionRepository }
@@ -18,4 +18,3 @@ func (s *ReportService) Monthly(ctx context.Context, month string) (*models.Repo
     rpt := &models.Report{Month: month, TotalIncome: inc, TotalExpense: exp, Balance: inc-exp}
     return rpt, nil
 }
-

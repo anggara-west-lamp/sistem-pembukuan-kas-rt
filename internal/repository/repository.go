@@ -5,7 +5,7 @@ import (
     "time"
 
     "gorm.io/gorm"
-    "sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
 )
 
 // Interfaces
@@ -92,4 +92,3 @@ func (r *trxRepo) SumByMonth(ctx context.Context, month string, ttype string) (f
     if err := q.Scan(&sum).Error; err != nil { return 0, err }
     return sum, nil
 }
-

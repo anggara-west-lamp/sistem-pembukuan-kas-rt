@@ -3,8 +3,8 @@ package service
 import (
     "context"
     "errors"
-    "sistem-pembukuan-kas-rt/internal/models"
-    "sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/models"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
 )
 
 // Fake repos for unit tests
@@ -48,4 +48,3 @@ var _ repository.UserRepository = (*fakeUserRepo)(nil)
 var _ repository.RoleRepository = (*fakeRoleRepo)(nil)
 var _ repository.KasRepository = (*fakeKasRepo)(nil)
 var _ repository.TransactionRepository = (*fakeTrxRepo)(nil)
-

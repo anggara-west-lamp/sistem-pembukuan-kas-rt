@@ -4,7 +4,7 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"
-    "sistem-pembukuan-kas-rt/internal/service"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/service"
 )
 
 type ReportHandler struct{ svc *service.ReportService }
@@ -18,4 +18,3 @@ func (h *ReportHandler) Monthly(c *gin.Context) {
     if err != nil { c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()}); return }
     c.JSON(http.StatusOK, rpt)
 }
-

@@ -6,11 +6,11 @@ import (
     "github.com/gin-gonic/gin"
     "gorm.io/gorm"
 
-    "sistem-pembukuan-kas-rt/internal/config"
-    "sistem-pembukuan-kas-rt/internal/httpserver/handlers"
-    "sistem-pembukuan-kas-rt/internal/httpserver/middleware"
-    "sistem-pembukuan-kas-rt/internal/repository"
-    "sistem-pembukuan-kas-rt/internal/service"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/httpserver/handlers"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/httpserver/middleware"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/service"
 )
 
 func SetupRouter(cfg *config.Config, db *gorm.DB) *gin.Engine {
@@ -60,4 +60,3 @@ func SetupRouter(cfg *config.Config, db *gorm.DB) *gin.Engine {
 
     return r
 }
-

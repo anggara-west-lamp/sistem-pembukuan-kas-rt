@@ -7,8 +7,8 @@ import (
 
     "github.com/golang-jwt/jwt/v5"
     "golang.org/x/crypto/bcrypt"
-    "sistem-pembukuan-kas-rt/internal/config"
-    "sistem-pembukuan-kas-rt/internal/repository"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
+    "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
 )
 
 type AuthService struct {
@@ -36,4 +36,3 @@ func (s *AuthService) Login(ctx context.Context, email, password string) (string
     token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
     return token.SignedString([]byte(s.cfg.JWTSecret))
 }
-

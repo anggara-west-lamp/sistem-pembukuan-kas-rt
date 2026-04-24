@@ -12,3 +12,5 @@ up:
 down:
 	docker compose down -v
 
+swagger:
+	go install github.com/swaggo/swag/cmd/swag@latest && swag init -g cmd/server/main.go -o internal/docs

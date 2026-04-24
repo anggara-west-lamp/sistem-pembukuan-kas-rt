@@ -4,9 +4,12 @@ import (
     "net/http"
 
     "github.com/gin-gonic/gin"
+    ginSwagger "github.com/swaggo/gin-swagger"
+    swaggerFiles "github.com/swaggo/files"
     "gorm.io/gorm"
 
     "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/config"
+    _ "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/docs"
     "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/httpserver/handlers"
     "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/httpserver/middleware"
     "github.com/anggara-west-lamp/sistem-pembukuan-kas-rt/internal/repository"
@@ -17,6 +20,7 @@ func SetupRouter(cfg *config.Config, db *gorm.DB) *gin.Engine {
     r := gin.Default()
 
     r.GET("/api/v1/healthz", func(c *gin.Context) { c.JSON(http.StatusOK, gin.H{"status":"ok"}) })
+    r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerFiles.Handler))
 
     // repositories
     userRepo := repository.NewUserRepo(db)
